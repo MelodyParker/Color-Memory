@@ -12,6 +12,7 @@ socket.on("join", (id, otherUsername) => {
 })
 
 
+
 function attemptToJoin(username, room, callback) {
   console.log("attempting to join game...");
   socket.emit("join", username, room, (success, currentIsStartingPlayer, otherPlayerObj, errorMessage) => {

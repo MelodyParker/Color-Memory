@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Color Memory</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://color-memory-server.developerperson.repl.co/socket.io/socket.io.js" defer></script>
+  <script src="constants.js" defer></script>
+  <script src="socket-logic.js" defer></script>
+  <script src="logic.js" defer></script>
+  <script src="display.js" defer></script>
+  <script src="script.js" defer></script>
+  
+</head>
+
+<body>
+  <form id="join-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="room">Room:</label>
+    <input type="text" id="room" name="room">
+    <button type="submit">Join Room</button>
+  </form>
+  <div id="waiting"></div>
+  <div id="memory-board">
+    
+  </div>
+</body>
+
+</html>

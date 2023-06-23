@@ -1,0 +1,4 @@
+const BOARD_WIDTH = 4;
+const BOARD_HEIGHT = 3;
+const NUM_COLORS = Math.floor(BOARD_WIDTH * BOARD_HEIGHT / 2);
+const BLACK_EXISTS = (BOARD_WIDTH * BOARD_HEIGHT) % 2 === 1;

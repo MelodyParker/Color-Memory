@@ -16,17 +16,25 @@
 </head>
 
 <body>
-  <form id="join-form">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-    <label for="room">Room:</label>
-    <input type="text" id="room" name="room">
-    <button type="submit">Join Room</button>
-  </form>
-  <div id="waiting"></div>
-  <div id="memory-board">
-    
+  <div id="join-form-container">
+    <form id="join-form">
+      <div class="form-input-container">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      
+      <div class="form-input-container">
+        <label for="room">Room:</label>
+        <input type="text" id="room" name="room">
+      </div>
+      <button type="submit">Join Room</button>
+    </form>
   </div>
+  <div id="waiting"></div>
+  <div id="memory-board"></div>
+  <div id="turn"></div>
+  <div id="score"></div>
+  <div id="opponent-score"></div>
 </body>
 
 </html>

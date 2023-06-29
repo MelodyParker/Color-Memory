@@ -7,11 +7,22 @@ let waitingForOther = true;
 let memoryBoard = [];
 let chosenColors;
 
+
+let currentTurn;
+let playedFirstTile = false;
+let playedSecondTile = false;
+let firstSelectedColor;
+let firstSelectedTileX;
+let firstSelectedTileY;
+
+let score = 0, opponentScore = 0;
+
 const joinForm = document.querySelector("#join-form");
 const waitingDiv = document.querySelector("#waiting");
 const memoryBoardDiv = document.querySelector("#memory-board")
-
-
+const turnDiv = document.querySelector("#turn")
+const scoreDiv = document.querySelector("#score")
+const opponentScoreDiv = document.querySelector("#opponent-score")
 
 joinForm.onsubmit = (e) => {
   e.preventDefault();
@@ -31,14 +42,8 @@ function joinRoom(form) {
   attemptToJoin(username, room, (success, errorMessage) => {
     if (success) {
       console.log("Connected to room " + room)
-      form.remove();
-      populateMemoryBoard();
-      if (waitingForOther) {
-        waitingDiv.innerText = "Waiting for opponent..."
-        let chosenColors = generateColors(NUM_COLORS)
-      } else {
-        
-       }
+      form.parentNode.remove();
+      // form.remove();
     } else {
       alert(errorMessage);
     }
